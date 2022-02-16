@@ -1,5 +1,117 @@
 {
-  "current": "Default",
+  "current": {
+    "colors_accent_1": "#ff6e40",
+    "gradient_accent_1": "linear-gradient(180deg, rgba(255, 227, 97, 1), rgba(255, 227, 97, 1) 100%)",
+    "colors_accent_2": "#ff6e40",
+    "gradient_accent_2": "linear-gradient(180deg, rgba(0, 204, 97, 1), rgba(0, 204, 97, 1) 100%)",
+    "colors_text": "#FFFFFF",
+    "colors_outline_button_labels": "#ff6e40",
+    "colors_background_1": "#000000",
+    "gradient_background_1": "linear-gradient(310deg, rgba(18, 18, 18, 1) 15%, rgba(0, 0, 0, 1) 61%)",
+    "colors_background_2": "#1b1b1b",
+    "gradient_background_2": "linear-gradient(180deg, rgba(255, 110, 64, 1), rgba(249, 70, 13, 1) 100%)",
+    "type_header_font": "helvetica_n7",
+    "heading_scale": 110,
+    "type_body_font": "helvetica_n4",
+    "body_scale": 105,
+    "page_width": 1600,
+    "spacing_grid_horizontal": 12,
+    "spacing_grid_vertical": 12,
+    "buttons_border_thickness": 2,
+    "buttons_radius": 4,
+    "card_color_scheme": "inverse",
+    "accent_icons": "accent-2",
+    "social_instagram_link": "https:\/\/www.instagram.com\/evolution.agency\/",
+    "sections": {
+      "announcement-bar": {
+        "type": "announcement-bar",
+        "blocks": {
+          "announcement-bar-0": {
+            "type": "announcement",
+            "settings": {
+              "text": "Welcome to our store",
+              "color_scheme": "background-1",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "announcement-bar-0"
+        ],
+        "settings": {
+        }
+      },
+      "header": {
+        "type": "header",
+        "settings": {
+          "color_scheme": "background-1",
+          "logo_width": 90,
+          "logo_position": "middle-left",
+          "menu": "main-menu",
+          "menu_type_desktop": "mega",
+          "show_line_separator": true,
+          "enable_sticky_header": true,
+          "margin_bottom": 0
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "footer-0": {
+            "type": "link_list",
+            "settings": {
+              "heading": "Quick links",
+              "menu": "footer"
+            }
+          },
+          "footer-1": {
+            "type": "link_list",
+            "settings": {
+              "heading": "Info",
+              "menu": "footer"
+            }
+          },
+          "footer-2": {
+            "type": "text",
+            "settings": {
+              "heading": "Our mission",
+              "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "footer-0",
+          "footer-1",
+          "footer-2"
+        ],
+        "settings": {
+          "color_scheme": "background-1",
+          "newsletter_enable": true,
+          "newsletter_heading": "Subscribe to our emails",
+          "show_social": true,
+          "enable_country_selector": false,
+          "enable_language_selector": false,
+          "payment_enable": true,
+          "margin_top": 48,
+          "padding_top": 36,
+          "padding_bottom": 36
+        }
+      },
+      "main-password-header": {
+        "type": "main-password-header",
+        "settings": {
+        }
+      },
+      "main-password-footer": {
+        "type": "main-password-footer",
+        "settings": {
+        }
+      }
+    },
+    "content_for_index": [
+
+    ]
+  },
   "presets": {
     "Default": {
       "sections": {
@@ -15,7 +127,9 @@
           },
           "block_order": [
             "announcement-bar-0"
-          ]
+          ],
+          "settings": {
+          }
         },
         "header": {
           "type": "header",
@@ -27,7 +141,9 @@
           "type": "footer",
           "blocks": {
             "footer-0": {
-              "type": "link_list"
+              "type": "link_list",
+              "settings": {
+              }
             },
             "footer-1": {
               "type": "link_list",
@@ -55,10 +171,14 @@
           }
         },
         "main-password-header": {
-          "type": "main-password-header"
+          "type": "main-password-header",
+          "settings": {
+          }
         },
         "main-password-footer": {
-          "type": "main-password-footer"
+          "type": "main-password-footer",
+          "settings": {
+          }
         }
       }
     }
