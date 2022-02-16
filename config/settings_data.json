@@ -26,16 +26,25 @@
       "announcement-bar": {
         "type": "announcement-bar",
         "blocks": {
+          "cd1fe763-dc6c-4f24-9c50-8839a27fa739": {
+            "type": "announcement",
+            "settings": {
+              "text": "Dawn of Evolution",
+              "color_scheme": "background-2",
+              "link": ""
+            }
+          },
           "announcement-bar-0": {
             "type": "announcement",
             "settings": {
-              "text": "Welcome to our store",
+              "text": "Free Store Audit",
               "color_scheme": "background-1",
-              "link": ""
+              "link": "shopify:\/\/pages\/what-we-do"
             }
           }
         },
         "block_order": [
+          "cd1fe763-dc6c-4f24-9c50-8839a27fa739",
           "announcement-bar-0"
         ],
         "settings": {
@@ -45,7 +54,8 @@
         "type": "header",
         "settings": {
           "color_scheme": "background-1",
-          "logo_width": 90,
+          "logo": "shopify:\/\/shop_images\/evo_brand-white.png",
+          "logo_width": 60,
           "logo_position": "middle-left",
           "menu": "main-menu",
           "menu_type_desktop": "mega",
