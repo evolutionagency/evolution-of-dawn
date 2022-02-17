@@ -145,15 +145,6 @@
         "padding_bottom": 36
       }
     },
-    "1645089820c6ba4689": {
-      "type": "custom-liquid",
-      "settings": {
-        "custom_liquid": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"110%\" height=\"50\" viewBox=\"0 0 1367.484 50\" preserveAspectRatio=\"none\">\n    <path d=\"M1366.984.5v50.032L.5 49.659V37.232l286.327-.127a2.152 2.152 0 001.291-3.873l-14.014-10.52a2.151 2.151 0 011.291-3.872h47.789v-.079h561.642a2.152 2.152 0 001.291-3.873l-14.014-10.52a2.151 2.151 0 011.291-3.872z\" fill=\"#00CC61\" stroke=\"transparent\"><\/path>\n<\/svg>",
-        "color_scheme": "background-1",
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
     "multicolumn": {
       "type": "multicolumn",
       "blocks": {
@@ -180,7 +171,7 @@
         "button_label": "",
         "button_link": "",
         "swipe_on_mobile": false,
-        "color_scheme": "accent-2",
+        "color_scheme": "background-1",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -263,7 +254,6 @@
     "featured_collection",
     "collage",
     "video",
-    "1645089820c6ba4689",
     "multicolumn",
     "164508793801f15f76",
     "1645087466087aaa18",
