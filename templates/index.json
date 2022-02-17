@@ -151,47 +151,72 @@
         "column1": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column2": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column3": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "title": "Our approach",
+            "text": "<p>Evolution is a 100% customer-focused e-commerce website agency. From the moment you become a client, our mission is to become your e-commerce partner to support you as you grow. We listen to your business objectives and then focus on our<strong>Super Six<\/strong>areas of improvement to build an actionable roadmap to success. We take a deep dive into: Data, Audience, Engagement, Sales, Value and Loyalty across all your sales channels.<\/p>",
             "link_label": "",
             "link": ""
           }
         }
       },
       "block_order": [
-        "column1",
-        "column2",
-        "column3"
+        "column1"
       ],
       "settings": {
         "title": "",
         "image_width": "third",
         "image_ratio": "adapt",
-        "columns_desktop": 4,
+        "columns_desktop": 2,
         "column_alignment": "center",
         "background_style": "none",
         "button_label": "",
         "button_link": "",
         "swipe_on_mobile": false,
         "color_scheme": "background-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "164508793801f15f76": {
+      "type": "image-with-text",
+      "blocks": {
+        "16450879383a4ba63b-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Leading digital e-commerce agency",
+            "heading_size": "h2"
+          }
+        },
+        "16450879383a4ba63b-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>In over a decade as a leading digital e-commerce agency, our methodology has a track record of success. Above all, we ask questions and listen to ensure we understand your needs: the technical and design issues to overcome, and how you would like us to help. Never seeking a one-solution-fits-all approach, we plan and build bespoke solutions to help you maximise your return on investment.<\/p><p>Fresh-out-of-the-box is rarely good enough for successful e-commerce. We take e-commerce platforms and customer relationship management systems and refine them until they are ideally suited to your specific requirements.<\/p><p>And when momentum accelerates, we provide the essential ongoing technical support that leaves you with the confidence to take your online business to the next level.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "16450879383a4ba63b-2": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "16450879383a4ba63b-0",
+        "16450879383a4ba63b-1",
+        "16450879383a4ba63b-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/strategy-customer.png",
+        "height": "small",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "desktop_content_position": "bottom",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -220,6 +245,7 @@
     "collage",
     "video",
     "multicolumn",
+    "164508793801f15f76",
     "1645087466087aaa18"
   ]
 }
