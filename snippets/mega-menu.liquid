@@ -11,69 +11,113 @@
                 {% render 'icon-caret' %}
               </summary>
               <div class="mega-menu__content popup motion-reduce" tabindex="-1">
-                <ul class="mega-menu__list page-width">
-                  {%- for childlink in link.links -%}
-                    <li>
-                      <a href="{{ childlink.url }}" class="mega-menu__link mega-menu__link--level-1 caption-with-letter-spacing--medium uppercase{% if childlink.current %} mega-menu__link--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
-                        {{ childlink.title | escape }}
-                      </a>
-                      {%- if childlink.links != blank -%}
-                        <ul class="list-unstyled">
-                          {%- for grandchildlink in childlink.links -%}
-                            <li>
-                              <a href="{{ grandchildlink.url }}" class="mega-menu__link link{% if grandchildlink.current %} mega-menu__link--active{% endif %}"{% if grandchildlink.current %} aria-current="page"{% endif %}>
-                                {{ grandchildlink.title | escape }}
-                              </a>
-                            </li>
-                          {%- endfor -%}
-                        </ul>
-                      {%- endif -%}
-                    </li>
-                  {%- endfor -%}
-                  
-                </ul>
-                {% if section.settings.mega_image or section.settings.mega_title != blank or section.settings.mega_text != blank or section.settings.mega_link != blank %}
-                  <div class="mega-menu__promo-cta">
-                    {% unless section.settings.mega_image_link == blank %}
-                    <a href="{{ section.settings.mega_image_link }}" class="nav__sub__cta-image-link">
-                    {% endunless %}
-                        {% if section.settings.mega_image %}
-                            <img
-                                class="nav__sub__cta-image"
-                                src="{{ section.settings.mega_image | img_url: '300x' }}"
-                                srcset="
-                                    {{ section.settings.mega_image | img_url: '180x' }} 180w {{ 180 | divided_by: section.settings.mega_image.aspect_ratio | round }}h,
-                                    {{ section.settings.mega_image | img_url: '360x' }} 360w {{ 360 | divided_by: section.settings.mega_image.aspect_ratio | round }}h,
-                                    {{ section.settings.mega_image | img_url: '540x' }} 540w {{ 540 | divided_by: section.settings.mega_image.aspect_ratio | round }}h,
-                                    {{ section.settings.mega_image | img_url: '720x' }} 720w {{ 720 | divided_by: section.settings.mega_image.aspect_ratio | round }}h,
-                                    {{ section.settings.mega_image | img_url: '900x' }} 900w {{ 900 | divided_by: section.settings.mega_image.aspect_ratio | round }}h
-                                "
-                                width="300"
-                                height="{{ 300 | divided_by: section.settings.mega_image.aspect_ratio | round }}"
-                                alt="{{ section.settings.mega_image.alt }}"
-                                loading="lazy"
-                                sizes="20vw"
-                            />
-                        {% endif %}
-                    {% unless section.settings.mega_image_link == blank %}
-                    </a>
-                    {% endunless %}
-                    {% unless section.settings.mega_title == blank %}
-                        <h4 class="nav__sub__cta-title h5">{{ section.settings.mega_title  | escape }}</h4>
-                    {% endunless %}
-                    {% unless section.settings.mega_text == blank %}
-                        <div class="nav__sub__cta-text rte">
-                            {{ section.settings.mega_text }}
-                        </div>
-                    {% endunless %}
-                    {% unless section.settings.mega_link == blank %}
-                        <div class="nav__sub__cta-link">
-                            <a href="{{ section.settings.mega_link }}" class="link link--arrow">{{ section.settings.mega_link_title | escape }}</a>
-                        </div>
-                    {% endunless %}
-                  </div>
+                
+                  <ul class="mega-menu__list page-width">
+                    {%- for childlink in link.links -%}
+                      <li>
+                        <a href="{{ childlink.url }}" class="mega-menu__link mega-menu__link--level-1 caption-with-letter-spacing--medium uppercase{% if childlink.current %} mega-menu__link--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
+                          {{ childlink.title | escape }}
+                        </a>
+                        {%- if childlink.links != blank -%}
+                          <ul class="list-unstyled">
+                            {%- for grandchildlink in childlink.links -%}
+                              <li>
+                                <a href="{{ grandchildlink.url }}" class="mega-menu__link link{% if grandchildlink.current %} mega-menu__link--active{% endif %}"{% if grandchildlink.current %} aria-current="page"{% endif %}>
+                                  {{ grandchildlink.title | escape }}
+                                </a>
+                              </li>
+                            {%- endfor -%}
+                          </ul>
+                        {%- endif -%}
+                      </li>
+                    {%- endfor -%}
                     
-                  {% endif %}
+                  </ul>
+                  <div class="mega-menu__promo-cta">
+                    {% if section.settings.mega_image or section.settings.mega_title != blank or section.settings.mega_text != blank or section.settings.mega_link != blank %}
+                      <div class="mega-menu__promo-cta--1">
+                        {% unless section.settings.mega_image_link == blank %}
+                          <a href="{{ section.settings.mega_image_link }}" class="mega-menu__promo-cta-image-link">
+                        {% endunless %}
+                            {% if section.settings.mega_image %}
+                                <img
+                                    class="mega-menu__promo-cta-image"
+                                    src="{{ section.settings.mega_image | img_url: '300x' }}"
+                                    srcset="
+                                        {{ section.settings.mega_image | img_url: '180x' }} 180w {{ 180 | divided_by: section.settings.mega_image.aspect_ratio | round }}h,
+                                        {{ section.settings.mega_image | img_url: '360x' }} 360w {{ 360 | divided_by: section.settings.mega_image.aspect_ratio | round }}h,
+                                        {{ section.settings.mega_image | img_url: '540x' }} 540w {{ 540 | divided_by: section.settings.mega_image.aspect_ratio | round }}h,
+                                        {{ section.settings.mega_image | img_url: '720x' }} 720w {{ 720 | divided_by: section.settings.mega_image.aspect_ratio | round }}h,
+                                        {{ section.settings.mega_image | img_url: '900x' }} 900w {{ 900 | divided_by: section.settings.mega_image.aspect_ratio | round }}h
+                                    "
+                                    width="300"
+                                    height="{{ 300 | divided_by: section.settings.mega_image.aspect_ratio | round }}"
+                                    alt="{{ section.settings.mega_image.alt }}"
+                                    loading="lazy"
+                                    sizes="20vw"
+                                />
+                            {% endif %}
+                        {% unless section.settings.mega_image_link == blank %}
+                          </a>
+                        {% endunless %}
+                        {% unless section.settings.mega_title == blank %}
+                            <h4 class="mega-menu__promo-cta-title h5">{{ section.settings.mega_title  | escape }}</h4>
+                        {% endunless %}
+                        {% unless section.settings.mega_text == blank %}
+                            <div class="mega-menu__promo-cta-text rte">
+                                {{ section.settings.mega_text }}
+                            </div>
+                        {% endunless %}
+                        {% unless section.settings.mega_link == blank %}
+                            <div class="mega-menu__promo-cta-link">
+                                <a href="{{ section.settings.mega_link }}" class="link link--arrow">{{ section.settings.mega_link_title | escape }}</a>
+                            </div>
+                        {% endunless %}
+                      </div>
+                    {% endif %}
+                    
+                    {% if section.settings.mega_image_2 or section.settings.mega_title_2 != blank or section.settings.mega_text_2 != blank or section.settings.mega_link_2 != blank %}
+                      <div class="mega-menu__promo-cta--2">
+                        {% unless section.settings.mega_image_link_2 == blank %}
+                          <a href="{{ section.settings.mega_image_link_2 }}" class="mega-menu__promo-cta-image-link">
+                        {% endunless %}
+                            {% if section.settings.mega_image_2 %}
+                                <img
+                                    class="mega-menu__promo-cta-image"
+                                    src="{{ section.settings.mega_image_2 | img_url: '300x' }}"
+                                    srcset="
+                                        {{ section.settings.mega_image_2 | img_url: '180x' }} 180w {{ 180 | divided_by: section.settings.mega_image_2.aspect_ratio | round }}h,
+                                        {{ section.settings.mega_image_2 | img_url: '360x' }} 360w {{ 360 | divided_by: section.settings.mega_image_2.aspect_ratio | round }}h,
+                                        {{ section.settings.mega_image_2 | img_url: '540x' }} 540w {{ 540 | divided_by: section.settings.mega_image_2.aspect_ratio | round }}h,
+                                        {{ section.settings.mega_image_2 | img_url: '720x' }} 720w {{ 720 | divided_by: section.settings.mega_image_2.aspect_ratio | round }}h,
+                                        {{ section.settings.mega_image_2 | img_url: '900x' }} 900w {{ 900 | divided_by: section.settings.mega_image_2.aspect_ratio | round }}h
+                                    "
+                                    width="300"
+                                    height="{{ 300 | divided_by: section.settings.mega_image_2.aspect_ratio | round }}"
+                                    alt="{{ section.settings.mega_image_2.alt }}"
+                                    loading="lazy"
+                                    sizes="20vw"
+                                />
+                            {% endif %}
+                        {% unless section.settings.mega_image_link_2 == blank %}
+                          </a>
+                        {% endunless %}
+                        {% unless section.settings.mega_title_2 == blank %}
+                            <h4 class="mega-menu__promo-cta-title h5">{{ section.settings.mega_title_2 | escape }}</h4>
+                        {% endunless %}
+                        {% unless section.settings.mega_text_2 == blank %}
+                            <div class="mega-menu__promo-cta-text rte">
+                                {{ section.settings.mega_text_2 }}
+                            </div>
+                        {% endunless %}
+                        {% unless section.settings.mega_link_2 == blank %}
+                            <div class="mega-menu__promo-cta-link">
+                                <a href="{{ section.settings.mega_link_2 }}" class="link link--arrow">{{ section.settings.mega_link_title_2 | escape }}</a>
+                            </div>
+                        {% endunless %}
+                      </div>
+                    {% endif %}
+                  </div>
               </div>
             </details>
           </details-disclosure>
