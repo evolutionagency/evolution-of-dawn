@@ -55,14 +55,14 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Talk about your brand",
-            "heading_size": "h1"
+            "heading": "Want to sell more?",
+            "heading_size": "h2"
           }
         },
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
+            "text": "<p>We’re a full-service e-commerce consultancy based in Leeds with the expertise to optimise your e-commerce strategy and deliver high performing, data-driven websites. Expertly built and user-focused, we can accelerate your scalability for future growth.<\/p>"
           }
         }
       },
@@ -80,7 +80,7 @@
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
-        "title": "Featured products",
+        "title": "",
         "collection": "all",
         "products_to_show": 8,
         "columns_desktop": 4,
