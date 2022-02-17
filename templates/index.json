@@ -101,20 +101,20 @@
         "collection-0": {
           "type": "collection",
           "settings": {
-            "collection": ""
+            "collection": "adidas"
           }
         },
         "product": {
           "type": "product",
           "settings": {
-            "product": "",
+            "product": "adidas-superstar-80s",
             "second_image": false
           }
         },
         "collection-1": {
           "type": "collection",
           "settings": {
-            "collection": ""
+            "collection": "men"
           }
         }
       },
@@ -136,7 +136,8 @@
       "type": "video",
       "settings": {
         "heading": "",
-        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "cover_image": "shopify:\/\/shop_images\/video-pic.png",
+        "video_url": "https:\/\/youtu.be\/FODFGgWGgLE",
         "description": "",
         "full_width": false,
         "color_scheme": "background-1",
