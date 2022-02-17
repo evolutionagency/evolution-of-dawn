@@ -239,6 +239,7 @@
     },
     "1645088199901c8a98": {
       "type": "page",
+      "disabled": true,
       "settings": {
         "page": "what-we-do",
         "color_scheme": "background-1",
