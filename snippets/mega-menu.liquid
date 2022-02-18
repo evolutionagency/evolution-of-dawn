@@ -1,3 +1,19 @@
+{%- capture full_width -%}
+  u-full-width
+  u-col-four
+{%- endcapture -%}
+
+{% style %}
+  .u-full-width {
+    width: 100%;
+  }
+  .u-col-four {
+    grid-template-columns: repeat(4,minmax(0,1fr))
+  }
+{% endstyle %}
+
+{% assign fullwidth = full_width | strip_newlines | split: '' %}
+
 {% comment %} TODO: Move snippet contents to header.liquid {% endcomment %}
 <nav class="header__inline-menu">
   <ul class="list-menu list-menu--inline">
@@ -12,27 +28,28 @@
               </summary>
               <div class="mega-menu__content popup motion-reduce" tabindex="-1">
                 
-                  <ul class="mega-menu__list page-width">
-                    {%- for childlink in link.links -%}
-                      <li>
-                        <a href="{{ childlink.url }}" class="mega-menu__link mega-menu__link--level-1 caption-with-letter-spacing--medium uppercase{% if childlink.current %} mega-menu__link--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
-                          {{ childlink.title | escape }}
-                        </a>
-                        {%- if childlink.links != blank -%}
-                          <ul class="list-unstyled">
-                            {%- for grandchildlink in childlink.links -%}
-                              <li>
-                                <a href="{{ grandchildlink.url }}" class="mega-menu__link link{% if grandchildlink.current %} mega-menu__link--active{% endif %}"{% if grandchildlink.current %} aria-current="page"{% endif %}>
-                                  {{ grandchildlink.title | escape }}
-                                </a>
-                              </li>
-                            {%- endfor -%}
-                          </ul>
-                        {%- endif -%}
-                      </li>
-                    {%- endfor -%}
-                    
-                  </ul>
+                <ul class="mega-menu__list page-width {% unless section.settings.mega_image or section.settings.mega_title != blank or section.settings.mega_text != blank or section.settings.mega_link != blank %}{{ fullwidth }}{% endunless %}">
+                  {%- for childlink in link.links -%}
+                    <li>
+                      <a href="{{ childlink.url }}" class="mega-menu__link mega-menu__link--level-1 caption-with-letter-spacing--medium uppercase{% if childlink.current %} mega-menu__link--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
+                        {{ childlink.title | escape }}
+                      </a>
+                      {%- if childlink.links != blank -%}
+                        <ul class="list-unstyled">
+                          {%- for grandchildlink in childlink.links -%}
+                            <li>
+                              <a href="{{ grandchildlink.url }}" class="mega-menu__link link{% if grandchildlink.current %} mega-menu__link--active{% endif %}"{% if grandchildlink.current %} aria-current="page"{% endif %}>
+                                {{ grandchildlink.title | escape }}
+                              </a>
+                            </li>
+                          {%- endfor -%}
+                        </ul>
+                      {%- endif -%}
+                    </li>
+                  {%- endfor -%}
+                </ul>
+
+                {% if section.settings.mega_image or section.settings.mega_title != blank or section.settings.mega_text != blank or section.settings.mega_link != blank %}
                   <div class="mega-menu__promo-cta">
                     {% if section.settings.mega_image or section.settings.mega_title != blank or section.settings.mega_text != blank or section.settings.mega_link != blank %}
                       <div class="mega-menu__promo-cta--1">
@@ -118,6 +135,7 @@
                       </div>
                     {% endif %}
                   </div>
+                {% endif %}
               </div>
             </details>
           </details-disclosure>
