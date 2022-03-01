@@ -49,6 +49,11 @@
             "show_dynamic_checkout": true
           }
         },
+        "d56351fb-62f1-4472-9836-cf52f6e49e76": {
+          "type": "wishlist",
+          "settings": {
+          }
+        },
         "description": {
           "type": "description",
           "settings": {
@@ -106,6 +111,7 @@
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
+        "d56351fb-62f1-4472-9836-cf52f6e49e76",
         "description",
         "collapsible-row-0",
         "collapsible-row-1",
