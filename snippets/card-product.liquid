@@ -38,7 +38,7 @@
       style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
     >
       <div class="card__inner {% if settings.card_style == 'standard' %}color-{{ settings.card_color_scheme }}{% endif %}{% if card_product.featured_media or settings.card_style == 'standard' %} ratio{% endif %}" style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;">
-        {% render 'wishlisthero-collection-product' with product: product %}
+        
         {%- if card_product.featured_media -%}
           <div class="card__media">
             <div class="media media--transparent media--hover-effect">
@@ -81,6 +81,7 @@
           </div>
         {%- endif -%}
         <div class="card__content">
+          {% render 'wishlisthero-collection-product' with product: product %}
           <div class="card__information">
             <h3 class="card__heading">
               <a href="{{ card_product.url }}" class="full-unstyled-link">
