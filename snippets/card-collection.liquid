@@ -33,9 +33,10 @@
     style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
   >
     <div class="card__inner {% if settings.card_style == 'standard' %}color-{{ settings.card_color_scheme }}{% endif %}{% if card_collection.featured_image or settings.card_style == 'standard' %} ratio{% endif %}" style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;">
-      {% render 'wishlisthero-collection-product' with product: product %}
+      
       {%- if card_collection.featured_image -%}
         <div class="card__media">
+          
           <div class="media media--transparent media--hover-effect">
             <img
               srcset="{%- if card_collection.featured_image.width >= 165 -%}{{ card_collection.featured_image | img_url: '165x' }} 165w,{%- endif -%}
@@ -60,7 +61,8 @@
           </div>
         </div>
       {%- endif -%}
-      <div class="card__content">        
+      <div class="card__content">
+        {% render 'wishlisthero-collection-product' with product: product %}
         <div class="card__information">
           <h3 class="card__heading">
             <a{% if card_collection == blank %} role="link" aria-disabled="true"{% else %} href="{{ card_collection.url }}"{% endif %} class="full-unstyled-link">
