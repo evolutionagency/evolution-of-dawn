@@ -454,6 +454,9 @@
             </div>
 
             <script src="{{ 'pickup-availability.js' | asset_url }}" defer="defer"></script>
+          {%- when 'wishlist' -%}
+              {% render 'wishlisthero-custom-button.liquid' %}
+              
           {%- when 'rating' -%}
             {%- if product.metafields.reviews.rating.value != blank -%}
               {% liquid
@@ -734,6 +737,11 @@
           "info": "t:sections.main-product.blocks.buy_buttons.settings.show_dynamic_checkout.info"
         }
       ]
+    },
+  	{
+      "type": "wishlist",
+      "name": "Wishlist",
+      "limit": 1
     },
     {
       "type": "description",
