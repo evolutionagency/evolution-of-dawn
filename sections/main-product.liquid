@@ -367,6 +367,21 @@
                     >
                     <label class="field__label" for="url">{{ 'general.share.share_url' | t }}</label>
                   </div>
+                  <div>
+                    <ul class="social-media__item-list list--unstyled">
+                      <li class="social-media__item social-media__item--linkedin">
+                        <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ product.selected_variant.url | default: product.url | prepend: shop.url }}" target="_blank" rel="noopener" aria-label="{{ 'general.social.linkedin_share' | t }}">{% render 'icon-share' %}</a>
+                      </li>
+
+                      <li class="social-media__item social-media__item--facebook">
+                        <a href="https://www.facebook.com/sharer.php?u={{ product.selected_variant.url | default: product.url | prepend: shop.url }}" target="_blank" rel="noopener" aria-label="{{ 'general.social.facebook_share' | t }}">{% render 'icon-share' %}</a>
+                      </li>
+
+                      <li class="social-media__item">
+                        <a href="mailto:?&subject={{ product.title | escape }}&body={{ product.selected_variant.url | default: product.url | prepend: shop.url }}" aria-label="{{ 'general.social.email_share' | t }}">{% render 'icon-share' %}</a>
+                      </li>
+                    </ul>
+                  </div>
                   <button class="share-button__close hidden no-js-hidden">
                     {% render 'icon-close' %}
                     <span class="visually-hidden">{{ 'general.share.close' | t }}</span>
