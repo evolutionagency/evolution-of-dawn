@@ -49,6 +49,12 @@
             "show_dynamic_checkout": true
           }
         },
+        "share": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        },
         "d56351fb-62f1-4472-9836-cf52f6e49e76": {
           "type": "wishlist",
           "settings": {
@@ -94,12 +100,6 @@
             "content": "",
             "page": ""
           }
-        },
-        "share": {
-          "type": "share",
-          "settings": {
-            "share_label": "Share"
-          }
         }
       },
       "block_order": [
@@ -111,13 +111,13 @@
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
+        "share",
         "d56351fb-62f1-4472-9836-cf52f6e49e76",
         "description",
         "collapsible-row-0",
         "collapsible-row-1",
         "collapsible-row-2",
-        "collapsible-row-3",
-        "share"
+        "collapsible-row-3"
       ],
       "settings": {
         "enable_sticky_info": true,
